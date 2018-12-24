@@ -1,11 +1,4 @@
-spring.datasource:
-  url: jdbc:h2:file:~/AccountService;DB_CLOSE_ON_EXIT=FALSE
-  driverClassName: org.h2.Driver
-  username: sa
-  password:
-
-spring.jpa:
-  database-platform: org.hibernate.dialect.H2Dialect
-  hibernate.ddl-auto: none
-  generate-ddl: false
-  properties.hibernate.hbm2ddl.auto: none
+eureka.client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url.defaultZone: http://localhost:8701/eureka,http://localhost:8702/eureka
