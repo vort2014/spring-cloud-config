@@ -1,0 +1,17 @@
+server.port: 8700
+eureka.client.register-with-eureka: false
+zuul:
+  ignored-services: '*' # Used to filter services that should be ignored
+  routes:
+    clients:
+      path: /client/** # Path for the route
+      serviceId: ClientService # Service name registered at discovery server
+      stripPrefix: true # Remove or leave the route “path” when the request will be forwarded to original service
+    accounts:
+      path: /acount/**
+      serviceId: AccountService
+      stripPrefix: true
+    card-processin:
+      path: /processing/**
+      serviceId: ProcessingService
+      stripPrefix: true
